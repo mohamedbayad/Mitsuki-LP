@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mitsuki | Ramadan Fusion. Delivered.</title>
+    <meta name="description"
+        content="Experience premium Asian Fusion Ftour delivery. Sushi, Nems, Soups & Juices crafted to break your fast with elegance.">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'mitsuki-beige': '#F3DDBB',
+                        'mitsuki-cream': '#F6EBD9',
+                        'mitsuki-bronze': '#BC8440',
+                        'mitsuki-bronze-dark': '#9A6B30',
+                        'mitsuki-text': '#444444',
+                        'mitsuki-gold': '#D4A853',
+                    },
+                    fontFamily: {
+                        'display': ['Playfair Display', 'serif'],
+                        'body': ['Montserrat', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="font-body text-mitsuki-text overflow-x-hidden">
+    <!-- Decorative Background Pattern -->
+    <div class="fixed inset-0 pointer-events-none z-0 opacity-5">
+        <div class="fish-scale-pattern w-full h-full"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <!-- Logo -->
+                <a href="#" class="flex items-center space-x-2">
+                    <div class="w-12 h-12 bg-mitsuki-bronze rounded-full flex items-center justify-center">
+                        <span class="text-white font-display text-xl font-bold">M</span>
+                    </div>
+                    <span class="font-display text-2xl font-semibold text-mitsuki-bronze">Mitsuki</span>
+                </a>
+
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#packs"
+                        class="nav-link text-mitsuki-text hover:text-mitsuki-bronze transition-colors font-medium">Nos
+                        Packs</a>
+                    <a href="#about"
+                        class="nav-link text-mitsuki-text hover:text-mitsuki-bronze transition-colors font-medium">Notre
+                        Histoire</a>
+                    <a href="#order"
+                        class="nav-link text-mitsuki-text hover:text-mitsuki-bronze transition-colors font-medium">Commander</a>
+                    <a href="#order"
+                        class="btn-primary px-6 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all">
+                        Réserver Mon Ftour
+                    </a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden p-2" id="mobile-menu-btn" aria-label="Toggle menu">
+                    <svg class="w-6 h-6 text-mitsuki-bronze" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div class="hidden md:hidden bg-white/95 backdrop-blur-lg shadow-lg" id="mobile-menu">
+            <div class="px-4 py-6 space-y-4">
+                <a href="#packs"
+                    class="block text-mitsuki-text hover:text-mitsuki-bronze transition-colors font-medium py-2">Nos
+                    Packs</a>
+                <a href="#about"
+                    class="block text-mitsuki-text hover:text-mitsuki-bronze transition-colors font-medium py-2">Notre
+                    Histoire</a>
+                <a href="#order"
+                    class="block text-mitsuki-text hover:text-mitsuki-bronze transition-colors font-medium py-2">Commander</a>
+                <a href="#order" class="btn-primary block text-center px-6 py-3 rounded-full font-semibold mt-4">
+                    Réserver Mon Ftour
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center gradient-bg overflow-hidden pt-20">
+        <!-- Decorative Lanterns -->
+        <div class="absolute top-20 left-10 w-16 h-24 lantern-float opacity-60">
+            <div class="lantern"></div>
+        </div>
+        <div class="absolute top-32 right-16 w-12 h-20 lantern-float-delayed opacity-50">
+            <div class="lantern lantern-small"></div>
+        </div>
+        <div class="absolute bottom-40 left-20 w-10 h-16 lantern-float opacity-40">
+            <div class="lantern lantern-tiny"></div>
+        </div>
+
+        <!-- Gold Sparkles -->
+        <div class="sparkle-container">
+            <div class="sparkle"></div>
+            <div class="sparkle"></div>
+            <div class="sparkle"></div>
+            <div class="sparkle"></div>
+            <div class="sparkle"></div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-20">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Hero Content -->
+                <div class="text-center lg:text-left z-10">
+                    <div
+                        class="inline-flex items-center px-4 py-2 rounded-full bg-mitsuki-bronze/10 border border-mitsuki-bronze/30 mb-6">
+                        <span class="text-mitsuki-bronze font-medium text-sm flex items-center gap-2"><i
+                                data-lucide="moon" class="w-4 h-4"></i> Ramadan Kareem 2026</span>
+                    </div>
+
+                    <h1
+                        class="font-display text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-mitsuki-text leading-tight mb-6">
+                        Ramadan <span class="text-mitsuki-bronze">Fusion.</span><br>
+                        <span class="italic">Delivered.</span>
+                    </h1>
+
+                    <p class="text-lg sm:text-xl text-mitsuki-text/80 mb-8 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+                        Experience the crunch of our golden nems and the freshness of our signature rolls,
+                        <span class="text-mitsuki-bronze font-semibold">crafted to break your fast with elegance.</span>
+                    </p>
+
+                    <!-- Countdown Timer -->
+                    <div class="glass-card p-6 rounded-2xl mb-8 max-w-md mx-auto lg:mx-0">
+                        <p class="text-sm text-mitsuki-text/70 mb-3 font-medium flex items-center gap-2"><i
+                                data-lucide="clock" class="w-4 h-4"></i> Commandez dans</p>
+                        <div class="flex justify-center lg:justify-start space-x-4" id="countdown">
+                            <div class="text-center">
+                                <div class="text-3xl sm:text-4xl font-bold text-mitsuki-bronze" id="hours">00</div>
+                                <div class="text-xs text-mitsuki-text/60 uppercase tracking-wide">Heures</div>
+                            </div>
+                            <div class="text-2xl text-mitsuki-bronze font-bold">:</div>
+                            <div class="text-center">
+                                <div class="text-3xl sm:text-4xl font-bold text-mitsuki-bronze" id="minutes">00</div>
+                                <div class="text-xs text-mitsuki-text/60 uppercase tracking-wide">Minutes</div>
+                            </div>
+                            <div class="text-2xl text-mitsuki-bronze font-bold">:</div>
+                            <div class="text-center">
+                                <div class="text-3xl sm:text-4xl font-bold text-mitsuki-bronze" id="seconds">00</div>
+                                <div class="text-xs text-mitsuki-text/60 uppercase tracking-wide">Secondes</div>
+                            </div>
+                        </div>
+                        <p class="text-xs text-mitsuki-text/60 mt-3">pour une livraison avant Maghrib</p>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#order"
+                            class="btn-primary px-8 py-4 rounded-full font-semibold text-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-1 transition-all inline-flex items-center justify-center space-x-2">
+                            <span>Réserver Mon Ftour</span>
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                            </svg>
+                        </a>
+                        <a href="#packs"
+                            class="btn-secondary px-8 py-4 rounded-full font-semibold text-lg inline-flex items-center justify-center space-x-2">
+                            <span>Découvrir les Packs</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero Image -->
+                <div class="relative z-10">
+                    <div class="relative">
+                        <!-- Glow Effect -->
+                        <div
+                            class="absolute -inset-4 bg-gradient-to-r from-mitsuki-bronze/20 via-mitsuki-gold/20 to-mitsuki-bronze/20 rounded-3xl blur-2xl">
+                        </div>
+
+                        <!-- Main Image Container -->
+                        <div class="relative glass-card rounded-3xl p-4 overflow-hidden group">
+                            <div
+                                class="aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-mitsuki-beige to-mitsuki-cream flex items-center justify-center">
+                                <!-- Placeholder for hero food image -->
+                                <div class="text-center p-8">
+                                    <div class="mb-4"><i data-lucide="utensils-crossed"
+                                            class="w-24 h-24 text-mitsuki-bronze"></i></div>
+                                    <p class="text-mitsuki-bronze font-display text-xl">Imperial Feast</p>
+                                    <p class="text-mitsuki-text/60 text-sm mt-2">Our signature collection</p>
+                                </div>
+                            </div>
+
+                            <!-- Floating Badge -->
+                            <div
+                                class="absolute top-6 right-6 bg-mitsuki-bronze text-white px-4 py-2 rounded-full text-sm font-semibold shadow-lg flex items-center gap-1">
+                                <i data-lucide="flame" class="w-4 h-4"></i> Best Seller
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+            <a href="#packs"
+                class="flex flex-col items-center text-mitsuki-bronze/60 hover:text-mitsuki-bronze transition-colors">
+                <span class="text-xs mb-2 font-medium">Découvrir</span>
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+                </svg>
+            </a>
+        </div>
+    </section>
+
+    <!-- Trust Badges -->
+    <section class="py-12 bg-white/80 backdrop-blur-sm border-y border-mitsuki-bronze/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="flex flex-col items-center text-center group">
+                    <div
+                        class="w-16 h-16 rounded-full bg-gradient-to-br from-mitsuki-bronze/20 to-mitsuki-gold/20 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+                        <i data-lucide="leaf" class="w-7 h-7 text-mitsuki-bronze"></i>
+                    </div>
+                    <h3 class="font-semibold text-mitsuki-text">100% Frais</h3>
+                    <p class="text-sm text-mitsuki-text/60">Préparé le jour même</p>
+                </div>
+                <div class="flex flex-col items-center text-center group">
+                    <div
+                        class="w-16 h-16 rounded-full bg-gradient-to-br from-mitsuki-bronze/20 to-mitsuki-gold/20 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+                        <i data-lucide="truck" class="w-7 h-7 text-mitsuki-bronze"></i>
+                    </div>
+                    <h3 class="font-semibold text-mitsuki-text">Livraison Express</h3>
+                    <p class="text-sm text-mitsuki-text/60">Avant Maghrib garantie</p>
+                </div>
+                <div class="flex flex-col items-center text-center group">
+                    <div
+                        class="w-16 h-16 rounded-full bg-gradient-to-br from-mitsuki-bronze/20 to-mitsuki-gold/20 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+                        <i data-lucide="star" class="w-7 h-7 text-mitsuki-bronze"></i>
+                    </div>
+                    <h3 class="font-semibold text-mitsuki-text">Premium Quality</h3>
+                    <p class="text-sm text-mitsuki-text/60">Ingrédients sélectionnés</p>
+                </div>
+                <div class="flex flex-col items-center text-center group">
+                    <div
+                        class="w-16 h-16 rounded-full bg-gradient-to-br from-mitsuki-bronze/20 to-mitsuki-gold/20 flex items-center justify-center mb-3 group-hover:scale-110 transition-transform">
+                        <i data-lucide="gift" class="w-7 h-7 text-mitsuki-bronze"></i>
+                    </div>
+                    <h3 class="font-semibold text-mitsuki-text">Packaging Élégant</h3>
+                    <p class="text-sm text-mitsuki-text/60">Parfait pour recevoir</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="packs" class="py-20 lg:py-32 gradient-bg-reverse relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <span
+                    class="inline-block px-4 py-2 rounded-full bg-mitsuki-bronze/10 text-mitsuki-bronze font-medium text-sm mb-4">
+                    Nos Créations
+                </span>
+                <h2 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-mitsuki-text mb-6">
+                    Packs <span class="text-mitsuki-bronze">Ftour</span>
+                </h2>
+                <p class="text-lg text-mitsuki-text/70 max-w-2xl mx-auto">
+                    Des compositions exclusives pour sublimer votre table du Ramadan avec l'élégance de la cuisine
+                    asiatique.
+                </p>
+            </div>
+
+            <!-- Products Grid -->
+            <div class="grid md:grid-cols-3 gap-8 lg:gap-12">
+                <!-- Product 1: Solo Zen -->
+                <div class="product-card group">
+                    <div
+                        class="glass-card rounded-3xl p-6 h-full flex flex-col transform group-hover:-translate-y-2 transition-all duration-300">
+                        <!-- Image -->
+                        <div
+                            class="aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-mitsuki-beige to-mitsuki-cream mb-6 relative">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="text-center">
+                                    <div class="mb-2"><i data-lucide="utensils"
+                                            class="w-16 h-16 text-mitsuki-bronze"></i></div>
+                                    <p class="text-mitsuki-text/60 text-sm">Solo Zen Box</p>
+                                </div>
+                            </div>
+                            <div
+                                class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium text-mitsuki-bronze">
+                                1 Personne
+                            </div>
+                        </div>
+
+                        <!-- Content -->
+                        <div class="flex-grow">
+                            <h3 class="font-display text-2xl font-bold text-mitsuki-text mb-2">The Solo Zen</h3>
+                            <p class="text-mitsuki-text/70 mb-4">Le plaisir personnel parfait pour un Ftour en solo.</p>
+
+                            <!-- Features -->
+                            <ul class="space-y-2 mb-6">
+                                <li class="flex items-center text-sm text-mitsuki-text/70">
+                                    <span
+                                        class="w-6 h-6 rounded-full bg-mitsuki-bronze/10 flex items-center justify-center mr-3 text-xs">✓</span>
+                                    1 Soupe Asiatique (Fruits de mer ou Champignons)
+                                </li>
+                                <li class="flex items-center text-sm text-mitsuki-text/70">
+                                    <span
+                                        class="w-6 h-6 rounded-full bg-mitsuki-bronze/10 flex items-center justify-center mr-3 text-xs">✓</span>
+                                    1 Jus Frais (Berry/Fraise)
+                                </li>
+                                <li class="flex items-center text-sm text-mitsuki-text/70">
+                                    <span
+                                        class="w-6 h-6 rounded-full bg-mitsuki-bronze/10 flex items-center justify-center mr-3 text-xs">✓</span>
+                                    Dattes & Chebakia
+                                </li>
+                                <li class="flex items-center text-sm text-mitsuki-text/70">
+                                    <span
+                                        class="w-6 h-6 rounded-full bg-mitsuki-bronze/10 flex items-center justify-center mr-3 text-xs">✓</span>
+                                    10-12 Sushi Rolls & Nems Frits
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Price & CTA -->
+                        <div class="flex items-center justify-between pt-6 border-t border-mitsuki-bronze/10">
+                            <div>
+                                <span class="text-3xl font-bold text-mitsuki-bronze">189</span>
+                                <span class="text-mitsuki-bronze font-medium"> DH</span>
+                            </div>
+                            <button
+                                class="btn-primary px-6 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all"
+                                onclick="selectPack('solo-zen', 189)">
+                                Commander
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2: Duo Harmony -->
+                <div class="product-card group">
+                    <div
+                        class="glass-card rounded-3xl p-6 h-full flex flex-col transform group-hover:-translate-y-2 transition-all duration-300 relative">
+                        <!-- Popular Badge -->
+                        <div
+                            class="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-mitsuki-bronze to-mitsuki-gold text-white px-6 py-2 rounded-full text-sm font-semibold shadow-lg z-10 flex items-center gap-1">
+                            <i data-lucide="sparkles" class="w-4 h-4"></i> Le Plus Populaire
+                        </div>
+
+                        <!-- Image -->
+                        <div
+                            class="aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-mitsuki-beige to-mitsuki-cream mb-6 relative mt-4">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="text-center">
+                                    <div class="mb-2"><i data-lucide="soup" class="w-16 h-16 text-mitsuki-bronze"></i>
+                                    </div>
+                                    <p class="text-mitsuki-text/60 text-sm">Duo Harmony Set</p>
+                                </div>
+                            </div>
+                            <div
+                                class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium text-mitsuki-bronze">
+                                2 Personnes
+                            </div>
+                        </div>
+
+                        <!-- Content -->
+                        <div class="flex-grow">
+                            <h3 class="font-display text-2xl font-bold text-mitsuki-text mb-2">The Duo Harmony</h3>
+                            <p class="text-mitsuki-text/70 mb-4">Un voyage culinaire partagé à deux.</p>
+
+                            <!-- Features -->
+                            <ul class="space-y-2 mb-6">
+                                <li class="flex items-center text-sm text-mitsuki-text/70">
+                                    <span
+                                        class="w-6 h-6 rounded-full bg-mitsuki-bronze/10 flex items-center justify-center mr-3 text-xs">✓</span>
+                                    2 Soupes Variées
+                                </li>
+                                <li class="flex items-center text-sm text-mitsuki-text/70">
+                                    <span
+                                        class="w-6 h-6 rounded-full bg-mitsuki-bronze/10 flex items-center justify-center mr-3 text-xs">✓</span>
+                                    2 Jus Frais Artisanaux
+                                </li>
+                                <li class="flex items-center text-sm text-mitsuki-text/70">
+                                    <span
+                                        class="w-6 h-6 rounded-full bg-mitsuki-bronze/10 flex items-center justify-center mr-3 text-xs">✓</span>
+                                    Plateau Yakitori & Nems à Partager
+                                </li>
+                                <li class="flex items-center text-sm text-mitsuki-text/70">
+                                    <span
+                                        class="w-6 h-6 rounded-full bg-mitsuki-bronze/10 flex items-center justify-center mr-3 text-xs">✓</span>
+                                    Assortiment Sushi (24 pièces)
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Price & CTA -->
+                        <div class="flex items-center justify-between pt-6 border-t border-mitsuki-bronze/10">
+                            <div>
+                                <span class="text-3xl font-bold text-mitsuki-bronze">349</span>
+                                <span class="text-mitsuki-bronze font-medium"> DH</span>
+                            </div>
+                            <button
+                                class="btn-primary px-6 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all"
+                                onclick="selectPack('duo-harmony', 349)">
+                                Commander
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3: Imperial Feast -->
+                <div class="product-card group">
+                    <div
+                        class="glass-card rounded-3xl p-6 h-full flex flex-col transform group-hover:-translate-y-2 transition-all duration-300">
+                        <!-- Image -->
+                        <div
+                            class="aspect-square rounded-2xl overflow-hidden bg-gradient-to-br from-mitsuki-beige to-mitsuki-cream mb-6 relative">
+                            <div class="absolute inset-0 flex items-center justify-center">
+                                <div class="text-center">
+                                    <div class="mb-2"><i data-lucide="crown" class="w-16 h-16 text-mitsuki-bronze"></i>
+                                    </div>
+                                    <p class="text-mitsuki-text/60 text-sm">Imperial Feast</p>
+                                </div>
+                            </div>
+                            <div
+                                class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-sm font-medium text-mitsuki-bronze">
+                                4+ Personnes
+                            </div>
+                        </div>
+
+                        <!-- Content -->
+                        <div class="flex-grow">
+                            <h3 class="font-display text-2xl font-bold text-mitsuki-text mb-2">The Imperial Feast</h3>
+                            <p class="text-mitsuki-text/70 mb-4">La pièce maîtresse de votre table familiale.</p>
+
+                            <!-- Features -->
+                            <ul class="space-y-2 mb-6">
+                                <li class="flex items-center text-sm text-mitsuki-text/70">
+                                    <span
+                                        class="w-6 h-6 rounded-full bg-mitsuki-bronze/10 flex items-center justify-center mr-3 text-xs">✓</span>
+                                    Grande Variété Sushi/Maki Frais & Frits
+                                </li>
+                                <li class="flex items-center text-sm text-mitsuki-text/70">
+                                    <span
+                                        class="w-6 h-6 rounded-full bg-mitsuki-bronze/10 flex items-center justify-center mr-3 text-xs">✓</span>
+                                    Assortiment Nems & Rouleaux de Printemps
+                                </li>
+                                <li class="flex items-center text-sm text-mitsuki-text/70">
+                                    <span
+                                        class="w-6 h-6 rounded-full bg-mitsuki-bronze/10 flex items-center justify-center mr-3 text-xs">✓</span>
+                                    Wok ou Brochettes Familiales
+                                </li>
+                                <li class="flex items-center text-sm text-mitsuki-text/70">
+                                    <span
+                                        class="w-6 h-6 rounded-full bg-mitsuki-bronze/10 flex items-center justify-center mr-3 text-xs">✓</span>
+                                    Soupes Familiales + Multiples Jus
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- Price & CTA -->
+                        <div class="flex items-center justify-between pt-6 border-t border-mitsuki-bronze/10">
+                            <div>
+                                <span class="text-3xl font-bold text-mitsuki-bronze">599</span>
+                                <span class="text-mitsuki-bronze font-medium"> DH</span>
+                            </div>
+                            <button
+                                class="btn-primary px-6 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all"
+                                onclick="selectPack('imperial-feast', 599)">
+                                Commander
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About/Freshness Section -->
+    <section id="about" class="py-20 lg:py-32 bg-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <!-- Image Grid -->
+                <div class="relative">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="space-y-4">
+                            <div
+                                class="aspect-square rounded-2xl bg-gradient-to-br from-mitsuki-beige to-mitsuki-cream p-6 flex items-center justify-center">
+                                <div class=""><i data-lucide="chef-hat" class="w-14 h-14 text-mitsuki-bronze"></i></div>
+                            </div>
+                            <div
+                                class="aspect-[4/3] rounded-2xl bg-gradient-to-br from-mitsuki-bronze/10 to-mitsuki-gold/10 p-6 flex items-center justify-center">
+                                <div class=""><i data-lucide="package" class="w-12 h-12 text-mitsuki-bronze"></i></div>
+                            </div>
+                        </div>
+                        <div class="space-y-4 mt-8">
+                            <div
+                                class="aspect-[4/3] rounded-2xl bg-gradient-to-br from-mitsuki-gold/10 to-mitsuki-bronze/10 p-6 flex items-center justify-center">
+                                <div class=""><i data-lucide="box" class="w-12 h-12 text-mitsuki-bronze"></i></div>
+                            </div>
+                            <div
+                                class="aspect-square rounded-2xl bg-gradient-to-br from-mitsuki-cream to-mitsuki-beige p-6 flex items-center justify-center">
+                                <div class=""><i data-lucide="soup" class="w-14 h-14 text-mitsuki-bronze"></i></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Floating Badge -->
+                    <div
+                        class="absolute -bottom-6 left-1/2 transform -translate-x-1/2 glass-card px-8 py-4 rounded-2xl shadow-xl">
+                        <div class="flex items-center space-x-3">
+                            <div
+                                class="w-12 h-12 bg-gradient-to-br from-mitsuki-bronze to-mitsuki-gold rounded-full flex items-center justify-center text-white text-xl">
+                                ✓
+                            </div>
+                            <div>
+                                <p class="font-semibold text-mitsuki-text">Fraîcheur Garantie</p>
+                                <p class="text-sm text-mitsuki-text/60">Préparé chaque jour à 15h</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Content -->
+                <div>
+                    <span
+                        class="inline-block px-4 py-2 rounded-full bg-mitsuki-bronze/10 text-mitsuki-bronze font-medium text-sm mb-6">
+                        Notre Engagement
+                    </span>
+                    <h2 class="font-display text-4xl sm:text-5xl font-bold text-mitsuki-text mb-6 leading-tight">
+                        L'Art de la <span class="text-mitsuki-bronze">Fusion</span><br>Asiatique
+                    </h2>
+                    <p class="text-lg text-mitsuki-text/70 mb-8 leading-relaxed">
+                        Chez Mitsuki, nous croyons que le Ftour mérite l'excellence. Chaque jour, nos chefs préparent
+                        vos commandes avec des ingrédients frais sélectionnés avec soin,
+                        pour vous offrir une expérience culinaire unique qui allie tradition du Ramadan et saveurs
+                        d'Asie.
+                    </p>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start space-x-4">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-gradient-to-br from-mitsuki-bronze/20 to-mitsuki-gold/20 flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="clock" class="w-6 h-6 text-mitsuki-bronze"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-mitsuki-text mb-1">Préparation Quotidienne</h4>
+                                <p class="text-mitsuki-text/60">Tout est préparé le jour même à partir de 15h pour
+                                    garantir une fraîcheur optimale.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-gradient-to-br from-mitsuki-bronze/20 to-mitsuki-gold/20 flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="car" class="w-6 h-6 text-mitsuki-bronze"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-mitsuki-text mb-1">Livraison Avant Maghrib</h4>
+                                <p class="text-mitsuki-text/60">Nous garantissons une livraison à temps pour que votre
+                                    Ftour soit prêt.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div
+                                class="w-12 h-12 rounded-xl bg-gradient-to-br from-mitsuki-bronze/20 to-mitsuki-gold/20 flex items-center justify-center flex-shrink-0">
+                                <i data-lucide="gift" class="w-6 h-6 text-mitsuki-bronze"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-semibold text-mitsuki-text mb-1">Packaging Premium</h4>
+                                <p class="text-mitsuki-text/60">Une présentation élégante pour impressionner vos
+                                    invités.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Section -->
+    <section id="order" class="py-20 lg:py-32 gradient-bg relative overflow-hidden">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center mb-12">
+                <span
+                    class="inline-block px-4 py-2 rounded-full bg-mitsuki-bronze/10 text-mitsuki-bronze font-medium text-sm mb-4">
+                    Commander
+                </span>
+                <h2 class="font-display text-4xl sm:text-5xl font-bold text-mitsuki-text mb-6">
+                    Réservez Votre <span class="text-mitsuki-bronze">Ftour</span>
+                </h2>
+                <p class="text-lg text-mitsuki-text/70">
+                    Choisissez votre date et créneau de livraison
+                </p>
+            </div>
+
+            <!-- Order Form -->
+            <div class="glass-card rounded-3xl p-8 lg:p-12">
+                <form id="order-form" class="space-y-8">
+                    <!-- Selected Pack Display -->
+                    <div id="selected-pack-display"
+                        class="hidden p-6 rounded-2xl bg-gradient-to-r from-mitsuki-bronze/10 to-mitsuki-gold/10 border border-mitsuki-bronze/20">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <p class="text-sm text-mitsuki-text/60 mb-1">Pack Sélectionné</p>
+                                <p class="font-semibold text-mitsuki-text text-lg" id="selected-pack-name">-</p>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-sm text-mitsuki-text/60 mb-1">Prix</p>
+                                <p class="font-bold text-mitsuki-bronze text-2xl"><span
+                                        id="selected-pack-price">0</span> DH</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Pack Selection (if not selected) -->
+                    <div id="pack-selection" class="space-y-4">
+                        <label class="block text-sm font-medium text-mitsuki-text mb-2">Choisissez votre Pack</label>
+                        <div class="grid sm:grid-cols-3 gap-4">
+                            <button type="button"
+                                class="pack-option p-4 rounded-xl border-2 border-mitsuki-bronze/20 hover:border-mitsuki-bronze transition-colors text-left"
+                                onclick="selectPack('solo-zen', 189)">
+                                <span class="block mb-2"><i data-lucide="utensils"
+                                        class="w-6 h-6 text-mitsuki-bronze"></i></span>
+                                <span class="font-semibold text-mitsuki-text block">Solo Zen</span>
+                                <span class="text-mitsuki-bronze font-bold">189 DH</span>
+                            </button>
+                            <button type="button"
+                                class="pack-option p-4 rounded-xl border-2 border-mitsuki-bronze/20 hover:border-mitsuki-bronze transition-colors text-left"
+                                onclick="selectPack('duo-harmony', 349)">
+                                <span class="block mb-2"><i data-lucide="soup"
+                                        class="w-6 h-6 text-mitsuki-bronze"></i></span>
+                                <span class="font-semibold text-mitsuki-text block">Duo Harmony</span>
+                                <span class="text-mitsuki-bronze font-bold">349 DH</span>
+                            </button>
+                            <button type="button"
+                                class="pack-option p-4 rounded-xl border-2 border-mitsuki-bronze/20 hover:border-mitsuki-bronze transition-colors text-left"
+                                onclick="selectPack('imperial-feast', 599)">
+                                <span class="block mb-2"><i data-lucide="crown"
+                                        class="w-6 h-6 text-mitsuki-bronze"></i></span>
+                                <span class="font-semibold text-mitsuki-text block">Imperial Feast</span>
+                                <span class="text-mitsuki-bronze font-bold">599 DH</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <!-- Date Picker -->
+                        <div class="space-y-2">
+                            <label class="block text-sm font-medium text-mitsuki-text">Date de Livraison</label>
+                            <input type="date" id="delivery-date" required
+                                class="w-full px-4 py-3 rounded-xl border border-mitsuki-bronze/20 bg-white/50 focus:border-mitsuki-bronze focus:ring-2 focus:ring-mitsuki-bronze/20 outline-none transition-all">
+                        </div>
+
+                        <!-- Time Slot -->
+                        <div class="space-y-2">
+                            <label class="block text-sm font-medium text-mitsuki-text">Créneau de Livraison</label>
+                            <select id="delivery-time" required
+                                class="w-full px-4 py-3 rounded-xl border border-mitsuki-bronze/20 bg-white/50 focus:border-mitsuki-bronze focus:ring-2 focus:ring-mitsuki-bronze/20 outline-none transition-all">
+                                <option value="">Sélectionnez un créneau</option>
+                                <option value="16:00-17:00">16:00 - 17:00</option>
+                                <option value="17:00-18:00">17:00 - 18:00</option>
+                                <option value="18:00-19:00">18:00 - 19:00 (Avant Maghrib)</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <!-- Name -->
+                        <div class="space-y-2">
+                            <label class="block text-sm font-medium text-mitsuki-text">Nom Complet</label>
+                            <input type="text" id="customer-name" required placeholder="Votre nom"
+                                class="w-full px-4 py-3 rounded-xl border border-mitsuki-bronze/20 bg-white/50 focus:border-mitsuki-bronze focus:ring-2 focus:ring-mitsuki-bronze/20 outline-none transition-all">
+                        </div>
+
+                        <!-- Phone -->
+                        <div class="space-y-2">
+                            <label class="block text-sm font-medium text-mitsuki-text">Téléphone</label>
+                            <input type="tel" id="customer-phone" required placeholder="06 XX XX XX XX"
+                                class="w-full px-4 py-3 rounded-xl border border-mitsuki-bronze/20 bg-white/50 focus:border-mitsuki-bronze focus:ring-2 focus:ring-mitsuki-bronze/20 outline-none transition-all">
+                        </div>
+                    </div>
+
+                    <!-- Address -->
+                    <div class="space-y-2">
+                        <label class="block text-sm font-medium text-mitsuki-text">Adresse de Livraison</label>
+                        <textarea id="customer-address" required rows="3" placeholder="Votre adresse complète"
+                            class="w-full px-4 py-3 rounded-xl border border-mitsuki-bronze/20 bg-white/50 focus:border-mitsuki-bronze focus:ring-2 focus:ring-mitsuki-bronze/20 outline-none transition-all resize-none"></textarea>
+                    </div>
+
+                    <!-- Add-ons -->
+                    <div class="space-y-4">
+                        <label class="block text-sm font-medium text-mitsuki-text">Extras (Optionnel)</label>
+                        <div class="grid sm:grid-cols-3 gap-4">
+                            <label
+                                class="addon-option flex items-center space-x-3 p-4 rounded-xl border border-mitsuki-bronze/20 hover:border-mitsuki-bronze transition-colors cursor-pointer">
+                                <input type="checkbox" class="addon-checkbox hidden" data-price="25"
+                                    data-name="Soupe Extra">
+                                <div
+                                    class="w-5 h-5 rounded border-2 border-mitsuki-bronze/40 flex items-center justify-center addon-check">
+                                    <svg class="w-3 h-3 text-white hidden" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd"
+                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <span class="font-medium text-mitsuki-text block">Soupe Extra</span>
+                                    <span class="text-mitsuki-bronze text-sm">+25 DH</span>
+                                </div>
+                            </label>
+                            <label
+                                class="addon-option flex items-center space-x-3 p-4 rounded-xl border border-mitsuki-bronze/20 hover:border-mitsuki-bronze transition-colors cursor-pointer">
+                                <input type="checkbox" class="addon-checkbox hidden" data-price="15"
+                                    data-name="Jus Extra">
+                                <div
+                                    class="w-5 h-5 rounded border-2 border-mitsuki-bronze/40 flex items-center justify-center addon-check">
+                                    <svg class="w-3 h-3 text-white hidden" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd"
+                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <span class="font-medium text-mitsuki-text block">Jus Extra</span>
+                                    <span class="text-mitsuki-bronze text-sm">+15 DH</span>
+                                </div>
+                            </label>
+                            <label
+                                class="addon-option flex items-center space-x-3 p-4 rounded-xl border border-mitsuki-bronze/20 hover:border-mitsuki-bronze transition-colors cursor-pointer">
+                                <input type="checkbox" class="addon-checkbox hidden" data-price="10"
+                                    data-name="Sauce Extra">
+                                <div
+                                    class="w-5 h-5 rounded border-2 border-mitsuki-bronze/40 flex items-center justify-center addon-check">
+                                    <svg class="w-3 h-3 text-white hidden" fill="currentColor" viewBox="0 0 20 20">
+                                        <path fill-rule="evenodd"
+                                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </div>
+                                <div>
+                                    <span class="font-medium text-mitsuki-text block">Sauce Extra</span>
+                                    <span class="text-mitsuki-bronze text-sm">+10 DH</span>
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- Total -->
+                    <div class="p-6 rounded-2xl bg-gradient-to-r from-mitsuki-bronze to-mitsuki-gold">
+                        <div class="flex items-center justify-between text-white">
+                            <span class="text-lg font-medium">Total à Payer</span>
+                            <span class="text-3xl font-bold"><span id="total-price">0</span> DH</span>
+                        </div>
+                        <p class="text-white/70 text-sm mt-2 flex items-center gap-1"><i data-lucide="banknote"
+                                class="w-4 h-4"></i> Paiement à la livraison (Cash on Delivery)</p>
+                    </div>
+
+                    <!-- Submit -->
+                    <button type="submit"
+                        class="w-full bg-mitsuki-text hover:bg-mitsuki-text/90 text-white py-4 rounded-full font-semibold text-lg shadow-xl hover:shadow-2xl transform hover:-translate-y-0.5 transition-all flex items-center justify-center space-x-2">
+                        <span>Confirmer Ma Commande</span>
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7">
+                            </path>
+                        </svg>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-mitsuki-text py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-12">
+                <!-- Brand -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center space-x-2 mb-6">
+                        <div class="w-12 h-12 bg-mitsuki-bronze rounded-full flex items-center justify-center">
+                            <span class="text-white font-display text-xl font-bold">M</span>
+                        </div>
+                        <span class="font-display text-2xl font-semibold text-white">Mitsuki</span>
+                    </div>
+                    <p class="text-white/70 mb-6 max-w-md">
+                        L'art de la fusion asiatique, livré à votre table pour un Ftour d'exception.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white/10 hover:bg-mitsuki-bronze flex items-center justify-center transition-colors">
+                            <i data-lucide="instagram" class="w-5 h-5 text-white"></i>
+                        </a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white/10 hover:bg-mitsuki-bronze flex items-center justify-center transition-colors">
+                            <i data-lucide="facebook" class="w-5 h-5 text-white"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-semibold text-white mb-6">Navigation</h4>
+                    <ul class="space-y-3">
+                        <li><a href="#packs" class="text-white/70 hover:text-mitsuki-bronze transition-colors">Nos
+                                Packs</a></li>
+                        <li><a href="#about" class="text-white/70 hover:text-mitsuki-bronze transition-colors">Notre
+                                Histoire</a></li>
+                        <li><a href="#order"
+                                class="text-white/70 hover:text-mitsuki-bronze transition-colors">Commander</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="font-semibold text-white mb-6">Contact</h4>
+                    <ul class="space-y-3">
+                        <li class="text-white/70 flex items-center gap-2"><i data-lucide="phone" class="w-4 h-4"></i>
+                            +212 6XX XX XX XX</li>
+                        <li class="text-white/70 flex items-center gap-2"><i data-lucide="mail" class="w-4 h-4"></i>
+                            contact@mitsuki.ma</li>
+                        <li class="text-white/70 flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4"></i>
+                            Casablanca, Maroc</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 mt-12 pt-8 text-center">
+                <p class="text-white/50 text-sm flex items-center justify-center gap-1">© 2026 Mitsuki. Tous droits
+                    réservés. <i data-lucide="moon" class="w-4 h-4"></i> Ramadan Kareem</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/212600000000?text=Bonjour%20Mitsuki%20!%20Je%20voudrais%20passer%20une%20commande%20pour%20le%20Ftour."
+        target="_blank"
+        class="fixed bottom-6 right-6 z-50 w-16 h-16 bg-green-500 hover:bg-green-600 rounded-full shadow-2xl flex items-center justify-center transform hover:scale-110 transition-all group">
+        <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z" />
+        </svg>
+        <span
+            class="absolute -top-2 -right-2 w-6 h-6 bg-red-500 rounded-full flex items-center justify-center text-white text-xs font-bold animate-pulse">1</span>
+
+        <!-- Tooltip -->
+        <div
+            class="absolute right-20 top-1/2 transform -translate-y-1/2 bg-white px-4 py-2 rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap">
+            <span class="text-mitsuki-text text-sm font-medium flex items-center gap-1">Besoin d'aide? <i
+                    data-lucide="message-circle" class="w-4 h-4"></i></span>
+            <div class="absolute right-0 top-1/2 transform translate-x-1/2 -translate-y-1/2 rotate-45 w-2 h-2 bg-white">
+            </div>
+        </div>
+    </a>
+
+    <!-- Order Confirmation Modal -->
+    <div id="order-modal"
+        class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/50 backdrop-blur-sm">
+        <div class="bg-white rounded-3xl p-8 max-w-md w-full text-center transform scale-95 opacity-0 transition-all"
+            id="modal-content">
+            <div
+                class="w-20 h-20 bg-gradient-to-br from-green-400 to-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                </svg>
+            </div>
+            <h3 class="font-display text-2xl font-bold text-mitsuki-text mb-4 flex items-center justify-center gap-2">
+                Commande Confirmée! <i data-lucide="party-popper" class="w-6 h-6 text-mitsuki-bronze"></i></h3>
+            <p class="text-mitsuki-text/70 mb-6">Merci pour votre commande. Vous recevrez un appel de confirmation sous
+                peu.</p>
+            <p class="text-sm text-mitsuki-text/50 mb-8 flex items-center justify-center gap-1">Ramadan Kareem! <i
+                    data-lucide="moon" class="w-4 h-4"></i></p>
+            <button onclick="closeModal()" class="btn-primary px-8 py-3 rounded-full font-semibold">
+                Fermer
+            </button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script>
+        // Initialize Lucide Icons
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

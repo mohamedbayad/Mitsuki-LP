@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mitsuki - Ftour d'Exception</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+
+<body class="antialiased">
+
+    <div
+        class="bg-[#5D4037] text-[#FFF8F0] text-center py-2 px-4 text-xs font-bold uppercase tracking-widest flex justify-center items-center gap-2">
+        <span class="animate-pulse">🔴</span> Dernières commandes pour ce soir : <span id="top-timer">03h 12m</span>
+    </div>
+
+    <nav class="sticky top-0 w-full z-40 bg-[#FFF8F0]/95 backdrop-blur-sm border-b border-[#BC8440]/20">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-serif font-bold text-[#BC8440]">
+                <img src="/assets/media/imgs/logo.png" alt="mitsuki" class="w-16 h-16">
+            </div>
+            <a href="#menu"
+                class="text-xs font-bold uppercase tracking-widest text-[#5D4037] border-b border-[#BC8440] hover:text-[#BC8440]">Réserver</a>
+        </div>
+    </nav>
+
+    <section class="pattern-bg pt-12 pb-20 px-6">
+        <div class="container mx-auto max-w-6xl grid lg:grid-cols-2 gap-12 items-center">
+            <div class="order-2 lg:order-1 text-center lg:text-left">
+                <span class="text-[#BC8440] font-serif italic mb-4 block">Le Ftour Autrement • Ramadan 2026</span>
+                <h1 class="text-5xl md:text-6xl font-serif text-[#5D4037] leading-tight mb-6">
+                    Rompez le Jeûne, <br> <span class="text-[#BC8440]">Voyagez.</span>
+                </h1>
+                <p class="text-gray-600 mb-8 max-w-md mx-auto lg:mx-0 font-medium">
+                    Une alternative fraîche et légère pour votre table d'Iftar.
+                    Oubliez la routine, redécouvrez le plaisir de manger sain et savoureux.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                    <a href="#menu"
+                        class="bg-[#BC8440] text-white py-3 px-8 rounded-full font-serif text-lg shadow-lg hover:bg-[#5D4037] transition duration-300">
+                        Commander à Domicile
+                    </a>
+                    <a href="https://wa.me/212600000000?text=Salam%20Mituski,%20je%20veux%20réserver%20une%20table%20pour%20le%20Ftour."
+                        target="_blank"
+                        class="border border-[#BC8440] text-[#BC8440] py-3 px-8 rounded-full font-serif text-lg hover:bg-[#BC8440] hover:text-white transition duration-300">
+                        Réserver ma Table
+                    </a>
+                </div>
+                <div
+                    class="mt-6 flex items-center justify-center lg:justify-start gap-2 text-xs uppercase tracking-widest text-[#5D4037]">
+                    <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span> Places limitées ce soir
+                </div>
+            </div>
+            <div class="order-1 lg:order-2">
+                <div class="relative rounded-t-full border-[6px] border-white shadow-2xl overflow-hidden h-[400px]">
+                    <img src="/assets/media/imgs/3.jpeg" class="w-full h-full object-cover">
+                    <div
+                        class="absolute bottom-0 w-full bg-gradient-to-t from-[#5D4037]/80 to-transparent h-24 flex items-end justify-center pb-4">
+                        <p class="text-white font-serif italic">Prêt à servir</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURES SECTION -->
+    <section class="py-12 bg-[#FFFDF9] border-y border-[#BC8440]/10">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x-0 md:divide-x divide-[#BC8440]/10">
+
+                <!-- Feature 1 -->
+                <div class="flex flex-col items-center group">
+                    <div
+                        class="w-16 h-16 rounded-full bg-[#F3DDBB]/30 flex items-center justify-center mb-4 text-[#BC8440] group-hover:bg-[#BC8440] group-hover:text-white transition-colors duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-8 h-8">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+                        </svg>
+                        <!-- Using leaf icon actually requested, but let's use a fresh leaf for "Frais" -->
+                        <!-- Re-doing icon selection to match "Leaf" better -->
+                    </div>
+                    <h3 class="text-[#5D4037] font-bold text-lg mb-1">100% Frais</h3>
+                    <p class="text-gray-500 text-xs">Préparé le jour même</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="flex flex-col items-center group">
+                    <div
+                        class="w-16 h-16 rounded-full bg-[#F3DDBB]/30 flex items-center justify-center mb-4 text-[#BC8440] group-hover:bg-[#BC8440] group-hover:text-white transition-colors duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-8 h-8">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12" />
+                        </svg>
+                    </div>
+                    <h3 class="text-[#5D4037] font-bold text-lg mb-1">Livraison Express</h3>
+                    <p class="text-gray-500 text-xs">Avant Maghrib garantie</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="flex flex-col items-center group">
+                    <div
+                        class="w-16 h-16 rounded-full bg-[#F3DDBB]/30 flex items-center justify-center mb-4 text-[#BC8440] group-hover:bg-[#BC8440] group-hover:text-white transition-colors duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-8 h-8">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.545.044.75.77.303 1.116l-4.102 3.167a.563.563 0 00-.192.59l1.229 5.378a.564.564 0 01-.814.593l-4.707-3.03a.563.563 0 00-.585 0l-4.707 3.03a.564.564 0 01-.814-.59l1.229-5.378a.563.563 0 00-.192-.59L2.83 10.072c-.447-.346-.242-1.072.303-1.116l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-[#5D4037] font-bold text-lg mb-1">Premium Quality</h3>
+                    <p class="text-gray-500 text-xs">Ingrédients sélectionnés</p>
+                </div>
+
+                <!-- Feature 4 -->
+                <div class="flex flex-col items-center group">
+                    <div
+                        class="w-16 h-16 rounded-full bg-[#F3DDBB]/30 flex items-center justify-center mb-4 text-[#BC8440] group-hover:bg-[#BC8440] group-hover:text-white transition-colors duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" class="w-8 h-8">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M21 11.25v8.25a1.5 1.5 0 01-1.5 1.5H4.5a1.5 1.5 0 01-1.5-1.5v-8.25M12 4.875A2.625 2.625 0 109.375 7.5H12m0-2.625V7.5m0-2.625A2.625 2.625 0 1114.625 7.5H12m0 0V21m-8.625-9.75h18c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-18c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z" />
+                        </svg>
+                    </div>
+                    <h3 class="text-[#5D4037] font-bold text-lg mb-1">Packaging Élégant</h3>
+                    <p class="text-gray-500 text-xs">Parfait pour recevoir</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- PROBLEM / AGITATION SECTION -->
+    <section class="py-16 bg-[#FFF8F0] text-center">
+        <div class="container mx-auto px-6 max-w-3xl">
+            <h2 class="text-3xl font-serif text-[#5D4037] mb-4">Votre Ftour, Exactement Comme Vous L'aimez.</h2>
+            <p class="text-gray-600 leading-relaxed text-lg">
+                Après une journée de jeûne, chaque envie compte. <br>
+                Sucré ou salé, léger ou réconfortant — <strong>choisissez ce que vous aimez et laissez-nous faire le
+                    reste.</strong> <br>
+                Aucune contrainte. Juste de la simplicité, du choix et de la saveur.
+            </p>
+        </div>
+    </section>
+
+    <section id="menu" class="py-20 px-6 pattern-bg">
+        <div class="container mx-auto max-w-4xl">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-serif text-[#5D4037]">La Collection 2026</h2>
+                <p class="text-sm text-[#BC8440] uppercase tracking-widest mt-2">Quantités Limitées</p>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden mb-8 flex flex-col md:flex-row product-card group"
+                data-product-id="zen-box" data-product-title="Solo Zen" data-product-price="249">
+                <div class="md:w-1/3 h-48 md:h-auto relative overflow-hidden">
+                    <img src="/assets/media/imgs/2.jpeg"
+                        class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                </div>
+                <div class="md:w-2/3 p-6 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-2xl font-serif text-[#5D4037]">Solo Zen</h3>
+                            <span class="text-xl font-bold text-[#BC8440]">249 DH</span>
+                        </div>
+                        <p class="text-xs text-gray-500 mb-4 italic">Votre moment de paix intérieur.</p>
+                        <ul class="text-sm text-gray-600 space-y-2 mb-6">
+                            <li>• Soupe Miso fumante & réconfortante</li>
+                            <li>• 12pc Sushi ultra-frais (Saumon, Avocat...)</li>
+                            <li>• Jus d'Orange pressé minute & Dattes Majhoul</li>
+                        </ul>
+                    </div>
+                    <button
+                        class="add-to-cart-btn w-full bg-[#F3DDBB] text-[#5D4037] font-bold py-3 rounded-lg hover:bg-[#BC8440] hover:text-white transition uppercase text-xs tracking-widest">
+                        Commander
+                    </button>
+                </div>
+            </div>
+
+            <div class="bg-[#FFFDF9] rounded-2xl shadow-xl overflow-hidden mb-8 flex flex-col md:flex-row border-2 border-[#BC8440] relative product-card group"
+                data-product-id="duo-delight" data-product-title="Duo Delight" data-product-price="489">
+                <div
+                    class="absolute top-0 right-0 bg-[#BC8440] text-white text-[10px] font-bold uppercase px-3 py-1 rounded-bl-lg z-10">
+                    Best Seller</div>
+
+                <div class="md:w-1/3 h-56 md:h-auto relative overflow-hidden">
+                    <img src="/assets/media/imgs/4.jpeg"
+                        class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                </div>
+                <div class="md:w-2/3 p-8 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-3xl font-serif text-[#5D4037]">Duo Delight</h3>
+                            <span class="text-2xl font-bold text-[#BC8440]">489 DH</span>
+                        </div>
+                        <p class="text-xs text-gray-500 mb-6 italic">L'harmonie parfaite à partager.</p>
+                        <div class="grid grid-cols-2 gap-3 text-sm text-[#5D4037] font-medium mb-6">
+                            <span>✓ 2x Soupes aux choix</span>
+                            <span>✓ 24pc Royal Assortiment</span>
+                            <span>✓ Yakitori Mix Grillé</span>
+                            <span>✓ Nems Croustillants</span>
+                            <span>✓ Jus & Dattes Premium</span>
+                        </div>
+                    </div>
+                    <button
+                        class="add-to-cart-btn w-full bg-[#BC8440] text-white font-bold py-4 rounded-lg hover:bg-[#5D4037] transition uppercase text-sm tracking-widest shadow-lg">
+                        Commander pour Deux
+                    </button>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-lg overflow-hidden mb-8 flex flex-col md:flex-row product-card group"
+                data-product-id="family-box" data-product-title="Family Box" data-product-price="899">
+                <div class="md:w-1/3 h-48 md:h-auto relative overflow-hidden">
+                    <img src="/assets/media/imgs/3.jpeg"
+                        class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                </div>
+                <div class="md:w-2/3 p-6 flex flex-col justify-between">
+                    <div>
+                        <div class="flex justify-between items-center mb-2">
+                            <h3 class="text-2xl font-serif text-[#5D4037]">Family</h3>
+                            <span class="text-xl font-bold text-[#BC8440]">899 DH</span>
+                        </div>
+                        <p class="text-xs text-gray-500 mb-4 italic">Le festin impérial (4-5 pers).</p>
+                        <ul class="text-sm text-gray-600 space-y-2 mb-6">
+                            <li>• Soupière 2L (Miso ou Piquante)</li>
+                            <li>• Grand Plateau 56 Pièces Variées</li>
+                            <li>• Carafe Jus 1L & Assortiment Entrées Chaudes</li>
+                        </ul>
+                    </div>
+                    <button
+                        class="add-to-cart-btn w-full bg-[#F3DDBB] text-[#5D4037] font-bold py-3 rounded-lg hover:bg-[#BC8440] hover:text-white transition uppercase text-xs tracking-widest">
+                        Commander
+                    </button>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="py-16 bg-white border-y border-[#BC8440]/10">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <div class="text-center mb-12">
+                <div class="flex justify-center text-[#BC8440] gap-1 mb-2 text-xl">★★★★★</div>
+                <h2 class="text-3xl font-serif text-[#5D4037]">Ils ont adoré leur Ftour</h2>
+                <p class="text-sm text-gray-500 mt-2">Rejoignez +500 familles casablancaises</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <!-- Review 1: Freshness -->
+                <div class="review-card p-6 rounded-xl relative">
+                    <div
+                        class="absolute -top-3 -left-3 bg-[#BC8440] text-white w-8 h-8 flex items-center justify-center rounded-full font-serif text-xl">
+                        "</div>
+                    <p class="text-gray-600 italic text-sm mb-4 leading-relaxed">
+                        Enfin un Ftour léger ! On se sent bien après, pas de ballonnements. C'est frais, c'est bon, et
+                        ça change vraiment.
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="w-8 h-8 bg-[#F3DDBB] rounded-full flex items-center justify-center text-[#5D4037] font-bold text-xs">
+                            S</div>
+                        <div>
+                            <p class="text-xs font-bold text-[#5D4037]">Sara B.</p>
+                            <p class="text-[10px] text-gray-400">Commande : Duo Delight</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2: Taste/Quality -->
+                <div class="review-card p-6 rounded-xl relative bg-[#FFFBF7]">
+                    <div
+                        class="absolute -top-3 -left-3 bg-[#BC8440] text-white w-8 h-8 flex items-center justify-center rounded-full font-serif text-xl">
+                        "</div>
+                    <p class="text-gray-600 italic text-sm mb-4 leading-relaxed">
+                        C'est la 3ème fois qu'on commande, jamais déçus. Les nems arrivent toujours croustillants et
+                        l'équilibre des saveurs est top.
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="w-8 h-8 bg-[#F3DDBB] rounded-full flex items-center justify-center text-[#5D4037] font-bold text-xs">
+                            M</div>
+                        <div>
+                            <p class="text-xs font-bold text-[#5D4037]">Mehdi C.</p>
+                            <p class="text-[10px] text-gray-400">Commande : Family Box</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3: Delivery Speed -->
+                <div class="review-card p-6 rounded-xl relative">
+                    <div
+                        class="absolute -top-3 -left-3 bg-[#BC8440] text-white w-8 h-8 flex items-center justify-center rounded-full font-serif text-xl">
+                        "</div>
+                    <p class="text-gray-600 italic text-sm mb-4 leading-relaxed">
+                        Livré à 17h55 pile avec le sourire. L'organisation est top, et le packaging fait vraiment son
+                        effet sur la table.
+                    </p>
+                    <div class="flex items-center gap-3">
+                        <div
+                            class="w-8 h-8 bg-[#F3DDBB] rounded-full flex items-center justify-center text-[#5D4037] font-bold text-xs">
+                            H</div>
+                        <div>
+                            <p class="text-xs font-bold text-[#5D4037]">Houda K.</p>
+                            <p class="text-[10px] text-gray-400">Commande : Solo Zen</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-white border-t border-[#BC8440]/10">
+        <div class="container mx-auto px-6 max-w-2xl">
+            <h2 class="text-3xl font-serif text-[#5D4037] text-center mb-10">Questions Fréquentes</h2>
+
+            <div class="space-y-4">
+                <details class="group bg-[#FFF8F0] p-4 rounded-lg cursor-pointer">
+                    <summary class="flex justify-between items-center font-bold text-[#5D4037]">
+                        Livrez-vous dans toute la ville ?
+                        <span class="faq-icon text-[#BC8440] text-xl">+</span>
+                    </summary>
+                    <p class="text-gray-600 text-sm mt-3 leading-relaxed">
+                        Nous livrons sur tout Casablanca (Dar Bouazza et Bouskoura inclus avec supplément). Commandez
+                        tôt pour garantir votre créneau.
+                    </p>
+                </details>
+
+                <details class="group bg-[#FFF8F0] p-4 rounded-lg cursor-pointer">
+                    <summary class="flex justify-between items-center font-bold text-[#5D4037]">
+                        Proposez-vous des options sans gluten ?
+                        <span class="faq-icon text-[#BC8440] text-xl">+</span>
+                    </summary>
+                    <p class="text-gray-600 text-sm mt-3 leading-relaxed">
+                        Oui, nous avons une sélection de sushis et plats sans gluten. Merci de le préciser en
+                        commentaire lors de votre commande WhatsApp.
+                    </p>
+                </details>
+
+                <details class="group bg-[#FFF8F0] p-4 rounded-lg cursor-pointer">
+                    <summary class="flex justify-between items-center font-bold text-[#5D4037]">
+                        Les plats arrivent-ils chauds ?
+                        <span class="faq-icon text-[#BC8440] text-xl">+</span>
+                    </summary>
+                    <p class="text-gray-600 text-sm mt-3 leading-relaxed">
+                        Absolument. Nos livreurs utilisent des sacs thermiques professionnels certifiés. Vos soupes,
+                        nems et plats chauds restent à température idéale jusqu'à votre table.
+                    </p>
+                </details>
+
+                <details class="group bg-[#FFF8F0] p-4 rounded-lg cursor-pointer">
+                    <summary class="flex justify-between items-center font-bold text-[#5D4037]">
+                        Comment annuler une réservation ?
+                        <span class="faq-icon text-[#BC8440] text-xl">+</span>
+                    </summary>
+                    <p class="text-gray-600 text-sm mt-3 leading-relaxed">
+                        Vous pouvez annuler sans frais jusqu'à 14h00 le jour même simplement en nous envoyant un message
+                        WhatsApp.
+                    </p>
+                </details>
+
+                <details class="group bg-[#FFF8F0] p-4 rounded-lg cursor-pointer">
+                    <summary class="flex justify-between items-center font-bold text-[#5D4037]">
+                        Puis-je choisir l'heure de livraison ?
+                        <span class="faq-icon text-[#BC8440] text-xl">+</span>
+                    </summary>
+                    <p class="text-gray-600 text-sm mt-3 leading-relaxed">
+                        Pour garantir la fraîcheur du Ftour, toutes nos livraisons s'effectuent entre <strong>17h00 et
+                            18h30</strong>. Les commandes sont clôturées à 16h00.
+                    </p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#5D4037] text-[#F3DDBB] py-12 text-center pb-24">
+        <h2 class="text-3xl font-serif mb-4">Mitsuki</h2>
+        <p class="text-xs uppercase tracking-widest opacity-60">Fait maison à Casablanca</p>
+        <span class="text-xs uppercase">created by <a href="https://clickboost.ma" target="_blank">clickboost</a></span>
+    </footer>
+
+    <div
+        class="fixed bottom-0 w-full sticky-countdown p-4 z-50 flex justify-between items-center shadow-[0_-5px_20px_rgba(0,0,0,0.2)]">
+        <div class="text-white">
+            <p class="text-[10px] uppercase tracking-widest opacity-80">Fin des commandes</p>
+            <p class="font-bold font-mono text-xl text-[#BC8440]" id="sticky-timer">00:00:00</p>
+        </div>
+        <a href="#menu"
+            class="bg-[#BC8440] text-white px-6 py-3 rounded-full font-bold text-xs uppercase tracking-widest shadow-lg hover:bg-white hover:text-[#BC8440] transition">
+            Commander
+        </a>
+    </div>
+
+    <div id="waiting-page"
+        class="fixed inset-0 bg-[#2D1F1B]/90 z-[9999] items-center justify-center p-6 backdrop-blur-md hidden transition-opacity duration-300">
+        <div
+            class="bg-[#FFF8F0] p-10 rounded-3xl text-center max-w-sm w-full shadow-2xl relative border border-[#BC8440] transform scale-100 transition-transform duration-300">
+
+            <!-- Close Button -->
+            <button id="close-popup-btn"
+                class="absolute top-4 right-4 text-[#BC8440] hover:text-[#5D4037] transition p-2">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                    stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+
+            <!-- Decorative Icon -->
+            <div class="w-16 h-16 bg-[#BC8440]/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span class="text-3xl animate-pulse">🌙</span>
+            </div>
+
+            <h2 class="text-3xl font-serif text-[#5D4037] mb-2 tracking-wide">Saha Ftorkum</h2>
+            <p class="text-xs text-[#BC8440] uppercase tracking-[0.2em] mb-8 font-bold">Commande en cours...</p>
+
+            <!-- Order Summary Box -->
+            <div class="bg-white border border-[#BC8440]/20 p-6 rounded-2xl mb-8 shadow-sm">
+                <p class="text-xs text-gray-400 uppercase tracking-wider mb-2">Votre choix</p>
+                <p id="wp-product-name" class="font-serif text-xl text-[#5D4037] font-bold mb-1">...</p>
+                <div class="w-8 h-0.5 bg-[#BC8440] mx-auto my-3"></div>
+                <p id="wp-product-price" class="text-[#BC8440] font-bold text-lg font-mono">...</p>
+            </div>
+
+            <button id="manual-redirect-btn"
+                class="w-full bg-[#25D366] text-white font-bold py-4 rounded-full hover:bg-[#128C7E] transition shadow-lg flex items-center justify-center gap-3 group">
+                <span>Confirmer sur WhatsApp</span>
+                <svg xmlns="http://www.w3.org/2000/svg"
+                    class="h-5 w-5 transform group-hover:translate-x-1 transition-transform" fill="none"
+                    viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+            </button>
+
+            <p class="mt-6 text-[10px] text-gray-400 max-w-[200px] mx-auto leading-relaxed">
+                Vous serez redirigé vers WhatsApp pour finaliser votre commande.
+            </p>
+        </div>
+    </div>
+    <script src="/assets/js/index.js"></script>
+</body>
+
+</html>

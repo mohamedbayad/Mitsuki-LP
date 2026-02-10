@@ -1,0 +1,92 @@
+ /* --- BRAND PALETTE --- */
+ :root {
+     --cream: #FFF8F0;
+     --gold: #BC8440;
+     --brown: #5D4037;
+     --paper: #F9F4EF;
+ }
+
+ body {
+     font-family: 'Lato', sans-serif;
+     background-color: var(--cream);
+     color: var(--brown);
+     overflow-x: hidden;
+     padding-bottom: 80px;
+     /* Space for sticky mobile bar */
+ }
+
+ h1,
+ h2,
+ h3,
+ .font-serif {
+     font-family: 'Playfair Display', serif;
+ }
+
+ /* --- PATTERN --- */
+ .pattern-bg {
+     background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23BC8440' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+ }
+
+ /* --- ACCORDION FAQ --- */
+ details>summary {
+     list-style: none;
+ }
+
+ details>summary::-webkit-details-marker {
+     display: none;
+ }
+
+ details[open] summary~* {
+     animation: sweep .5s ease-in-out;
+ }
+
+ @keyframes sweep {
+     0% {
+         opacity: 0;
+         transform: translateY(-10px)
+     }
+
+     100% {
+         opacity: 1;
+         transform: translateY(0)
+     }
+ }
+
+ .faq-icon {
+     transition: transform 0.3s ease;
+ }
+
+ details[open] .faq-icon {
+     transform: rotate(45deg);
+ }
+
+ /* --- COUNTDOWN STICKY BAR --- */
+ .sticky-countdown {
+     background: rgba(93, 64, 55, 0.95);
+     backdrop-filter: blur(10px);
+     border-top: 2px solid var(--gold);
+ }
+
+ /* --- TESTIMONIAL CARDS --- */
+ .review-card {
+     background: white;
+     border: 1px solid rgba(188, 132, 64, 0.2);
+     box-shadow: 0 10px 30px rgba(93, 64, 55, 0.05);
+     transition: transform 0.3s ease;
+ }
+
+ .review-card:hover {
+     transform: translateY(-5px);
+     border-color: var(--gold);
+ }
+
+ /* --- BUTTONS --- */
+ .btn-warm {
+     background-color: var(--gold);
+     color: white;
+     transition: 0.3s;
+ }
+
+ .btn-warm:hover {
+     background-color: var(--brown);
+ }
