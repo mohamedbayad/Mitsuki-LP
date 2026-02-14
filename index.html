@@ -16,7 +16,13 @@
 
     <div
         class="bg-[#5D4037] text-[#FFF8F0] text-center py-2 px-4 text-xs font-bold uppercase tracking-widest flex justify-center items-center gap-2">
-        <span class="animate-pulse">🔴</span> Dernières commandes pour ce soir : <span id="top-timer">03h 12m</span>
+        <span class="animate-pulse">🔴</span> Dernières commandes pour ce soir :
+        <div class="countertimer text-white">
+            <div class="font-bold font-mono text-xl text-[#BC8440]" data-landing-id="123">
+                <span id="hours" class="hours">00</span>:<span id="mins" class="mins">00</span>:<span id="secs"
+                    class="secs">00</span>
+            </div>
+        </div>
     </div>
 
     <nav class="sticky top-0 w-full z-40 bg-[#FFF8F0]/95 backdrop-blur-sm border-b border-[#BC8440]/20">
@@ -29,32 +35,18 @@
         </div>
     </nav>
 
-    <section class="pattern-bg pt-12 pb-20 px-6">
+    <section id="hero" class="pattern-bg pt-12 md:pb-20 px-6">
         <div class="container mx-auto max-w-6xl grid lg:grid-cols-2 gap-12 items-center">
             <div class="order-2 lg:order-1 text-center lg:text-left">
                 <span class="text-[#BC8440] font-serif italic mb-4 block">Le Ftour Autrement • Ramadan 2026</span>
                 <h1 class="text-5xl md:text-6xl font-serif text-[#5D4037] leading-tight mb-6">
-                    Rompez le Jeûne, <br> <span class="text-[#BC8440]">Voyagez.</span>
+                    Un Ftour d'Exception, <br> <span class="text-[#BC8440]">Aux Saveurs d'Asie.</span>
                 </h1>
                 <p class="text-gray-600 mb-8 max-w-md mx-auto lg:mx-0 font-medium">
                     Une alternative fraîche et légère pour votre table d'Iftar.
                     Oubliez la routine, redécouvrez le plaisir de manger sain et savoureux.
                 </p>
-                <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-                    <a href="#menu"
-                        class="bg-[#BC8440] text-white py-3 px-8 rounded-full font-serif text-lg shadow-lg hover:bg-[#5D4037] transition duration-300">
-                        Commander à Domicile
-                    </a>
-                    <a href="https://wa.me/212600000000?text=Salam%20Mituski,%20je%20veux%20réserver%20une%20table%20pour%20le%20Ftour."
-                        target="_blank"
-                        class="border border-[#BC8440] text-[#BC8440] py-3 px-8 rounded-full font-serif text-lg hover:bg-[#BC8440] hover:text-white transition duration-300">
-                        Réserver ma Table
-                    </a>
-                </div>
-                <div
-                    class="mt-6 flex items-center justify-center lg:justify-start gap-2 text-xs uppercase tracking-widest text-[#5D4037]">
-                    <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span> Places limitées ce soir
-                </div>
+
             </div>
             <div class="order-1 lg:order-2">
                 <div class="relative rounded-t-full border-[6px] border-white shadow-2xl overflow-hidden h-[400px]">
@@ -68,8 +60,172 @@
         </div>
     </section>
 
+
+
+    <section id="menu" class="pb-20 md:py-20 px-6 pattern-bg">
+        <div class="container mx-auto max-w-7xl">
+            <div class="text-center mb-16">
+                <!-- <h2 class="text-4xl font-serif text-[#5D4037]">La Collection 2026</h2>
+                <p class="text-sm text-[#BC8440] uppercase tracking-widest mt-2">Quantités Limitées</p> -->
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 items-start">
+                <!-- Card 1: Solo Zen -->
+                <div class="group relative rounded-[20px] shadow-xl overflow-hidden hover:scale-[1.02] transition-transform duration-300 bg-white product-card"
+                    data-product-id="zen-box" data-product-title="Solo Zen" data-product-price="249">
+
+                    <!-- Image Area -->
+                    <div class="relative overflow-hidden h-96 w-full cursor-pointer toggle-details-btn">
+                        <img src="/assets/media/imgs/2.jpeg"
+                            class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+
+                        <div class="absolute bottom-6 left-6 text-white text-left z-10">
+                            <h3 class="text-3xl font-serif leading-tight">Solo Zen</h3>
+                            <p class="text-xl font-bold text-[#BC8440] mt-1">249 DH</p>
+                        </div>
+
+                        <button type="button"
+                            class="absolute bottom-6 right-6 w-10 h-10 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white border border-white/30 hover:bg-white hover:text-[#BC8440] transition-all duration-300 arrow-icon z-30 cursor-pointer">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                stroke="currentColor"
+                                class="w-5 h-5 transition-transform duration-300 pointer-events-none">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <!-- Details Area -->
+                    <div
+                        class="details-content max-h-0 opacity-0 overflow-hidden transition-all duration-500 ease-in-out bg-white">
+                        <div class="p-6">
+                            <p class="text-sm text-gray-500 mb-4 italic">Votre moment de paix intérieur.</p>
+                            <ul class="text-sm text-gray-600 space-y-2 mb-6">
+                                <li>• Soupe Miso fumante & réconfortante</li>
+                                <li>• 12pc Sushi ultra-frais (Saumon, Avocat...)</li>
+                                <li>• Jus d'Orange pressé minute & Dattes Majhoul</li>
+                            </ul>
+                            <button type="button"
+                                class="btn-add-cart w-full bg-[#F3DDBB] text-[#5D4037] font-bold py-3 rounded-lg hover:bg-[#BC8440] hover:text-white transition uppercase text-xs tracking-widest"
+                                data-product-label="zen-box" data-price="249" data-title="Solo Zen">
+                                Commander
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Duo Delight -->
+                <div class="group relative rounded-[20px] shadow-xl overflow-hidden hover:scale-[1.02] transition-transform duration-300 bg-[#FFFDF9] border border-[#BC8440]/20 product-card"
+                    data-product-id="duo-delight" data-product-title="Duo Delight" data-product-price="489">
+
+                    <div
+                        class="absolute top-4 right-4 bg-[#BC8440] text-white text-[10px] font-bold uppercase px-3 py-1 rounded-full z-20 shadow-lg">
+                        Best Seller
+                    </div>
+
+                    <div class="relative overflow-hidden h-96 w-full cursor-pointer toggle-details-btn">
+                        <img src="/assets/media/imgs/4.jpeg"
+                            class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+
+                        <div class="absolute bottom-6 left-6 text-white text-left z-10">
+                            <h3 class="text-3xl font-serif leading-tight">Duo Delight</h3>
+                            <p class="text-xl font-bold text-[#BC8440] mt-1">489 DH</p>
+                        </div>
+
+                        <button type="button"
+                            class="absolute bottom-6 right-6 w-10 h-10 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white border border-white/30 hover:bg-white hover:text-[#BC8440] transition-all duration-300 arrow-icon z-30 cursor-pointer">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                stroke="currentColor"
+                                class="w-5 h-5 transition-transform duration-300 pointer-events-none">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div
+                        class="details-content max-h-0 opacity-0 overflow-hidden transition-all duration-500 ease-in-out bg-[#FFFDF9]">
+                        <div class="p-6">
+                            <p class="text-sm text-gray-500 mb-6 italic">L'harmonie parfaite à partager.</p>
+                            <div class="grid grid-cols-2 gap-3 text-sm text-[#5D4037] font-medium mb-6">
+                                <span>✓ 2x Soupes aux choix</span>
+                                <span>✓ 24pc Royal Assortiment</span>
+                                <span>✓ Yakitori Mix Grillé</span>
+                                <span>✓ Nems Croustillants</span>
+                                <span>✓ Jus & Dattes Premium</span>
+                            </div>
+                            <button type="button"
+                                class="btn-add-cart w-full bg-[#BC8440] text-white font-bold py-3 rounded-lg hover:bg-[#5D4037] transition uppercase text-xs tracking-widest shadow-lg"
+                                data-product-label="duo-delight" data-price="489" data-title="Duo Delight">
+                                Commander pour Deux
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Family Box -->
+                <div class="group relative rounded-[20px] shadow-xl overflow-hidden hover:scale-[1.02] transition-transform duration-300 bg-white product-card"
+                    data-product-id="family-box" data-product-title="Family Box" data-product-price="899">
+
+                    <div class="relative overflow-hidden h-96 w-full cursor-pointer toggle-details-btn">
+                        <img src="/assets/media/imgs/3.jpeg"
+                            class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
+
+                        <div class="absolute bottom-6 left-6 text-white text-left z-10">
+                            <h3 class="text-3xl font-serif leading-tight">Family</h3>
+                            <p class="text-xl font-bold text-[#BC8440] mt-1">899 DH</p>
+                        </div>
+
+                        <button type="button"
+                            class="absolute bottom-6 right-6 w-10 h-10 bg-white/20 backdrop-blur-md rounded-full flex items-center justify-center text-white border border-white/30 hover:bg-white hover:text-[#BC8440] transition-all duration-300 arrow-icon z-30 cursor-pointer">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                stroke="currentColor"
+                                class="w-5 h-5 transition-transform duration-300 pointer-events-none">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div
+                        class="details-content max-h-0 opacity-0 overflow-hidden transition-all duration-500 ease-in-out bg-white">
+                        <div class="p-6">
+                            <p class="text-sm text-gray-500 mb-4 italic">Le festin impérial (4-5 pers).</p>
+                            <ul class="text-sm text-gray-600 space-y-2 mb-6">
+                                <li>• Soupière 2L (Miso ou Piquante)</li>
+                                <li>• Grand Plateau 56 Pièces Variées</li>
+                                <li>• Carafe Jus 1L & Assortiment Entrées Chaudes</li>
+                            </ul>
+                            <button type="button"
+                                class="btn-add-cart w-full bg-[#F3DDBB] text-[#5D4037] font-bold py-3 rounded-lg hover:bg-[#BC8440] hover:text-white transition uppercase text-xs tracking-widest"
+                                data-product-label="family-box" data-price="899" data-title="Family Box">
+                                Commander
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cta" class="pb-20 md:py-20 px-6 pattern-bg text-center lg:text-left">
+
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="#menu"
+                class="bg-[#BC8440] text-white py-3 px-8 rounded-full font-serif text-lg shadow-lg hover:bg-[#5D4037] transition duration-300">
+                Commander à Domicile
+            </a>
+            <a href="https://wa.me/212600000000?text=Salam%20Mituski,%20je%20veux%20réserver%20une%20table%20pour%20le%20Ftour."
+                target="_blank"
+                class="border border-[#BC8440] text-[#BC8440] py-3 px-8 rounded-full font-serif text-lg hover:bg-[#BC8440] hover:text-white transition duration-300">
+                Réserver ma Table
+            </a>
+        </div>
+
+    </section>
+
     <!-- FEATURES SECTION -->
-    <section class="py-12 bg-[#FFFDF9] border-y border-[#BC8440]/10">
+    <section id="features" class="py-12 bg-[#FFFDF9] border-y border-[#BC8440]/10">
         <div class="container mx-auto px-6">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center divide-x-0 md:divide-x divide-[#BC8440]/10">
 
@@ -136,7 +292,7 @@
     </section>
 
     <!-- PROBLEM / AGITATION SECTION -->
-    <section class="py-16 bg-[#FFF8F0] text-center">
+    <section id="concept" class="py-16 bg-[#FFF8F0] text-center">
         <div class="container mx-auto px-6 max-w-3xl">
             <h2 class="text-3xl font-serif text-[#5D4037] mb-4">Votre Ftour, Exactement Comme Vous L'aimez.</h2>
             <p class="text-gray-600 leading-relaxed text-lg">
@@ -148,101 +304,7 @@
         </div>
     </section>
 
-    <section id="menu" class="py-20 px-6 pattern-bg">
-        <div class="container mx-auto max-w-4xl">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-serif text-[#5D4037]">La Collection 2026</h2>
-                <p class="text-sm text-[#BC8440] uppercase tracking-widest mt-2">Quantités Limitées</p>
-            </div>
-
-            <div class="bg-white rounded-2xl shadow-lg overflow-hidden mb-8 flex flex-col md:flex-row product-card group"
-                data-product-id="zen-box" data-product-title="Solo Zen" data-product-price="249">
-                <div class="md:w-1/3 h-48 md:h-auto relative overflow-hidden">
-                    <img src="/assets/media/imgs/2.jpeg"
-                        class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
-                </div>
-                <div class="md:w-2/3 p-6 flex flex-col justify-between">
-                    <div>
-                        <div class="flex justify-between items-center mb-2">
-                            <h3 class="text-2xl font-serif text-[#5D4037]">Solo Zen</h3>
-                            <span class="text-xl font-bold text-[#BC8440]">249 DH</span>
-                        </div>
-                        <p class="text-xs text-gray-500 mb-4 italic">Votre moment de paix intérieur.</p>
-                        <ul class="text-sm text-gray-600 space-y-2 mb-6">
-                            <li>• Soupe Miso fumante & réconfortante</li>
-                            <li>• 12pc Sushi ultra-frais (Saumon, Avocat...)</li>
-                            <li>• Jus d'Orange pressé minute & Dattes Majhoul</li>
-                        </ul>
-                    </div>
-                    <button
-                        class="add-to-cart-btn w-full bg-[#F3DDBB] text-[#5D4037] font-bold py-3 rounded-lg hover:bg-[#BC8440] hover:text-white transition uppercase text-xs tracking-widest">
-                        Commander
-                    </button>
-                </div>
-            </div>
-
-            <div class="bg-[#FFFDF9] rounded-2xl shadow-xl overflow-hidden mb-8 flex flex-col md:flex-row border-2 border-[#BC8440] relative product-card group"
-                data-product-id="duo-delight" data-product-title="Duo Delight" data-product-price="489">
-                <div
-                    class="absolute top-0 right-0 bg-[#BC8440] text-white text-[10px] font-bold uppercase px-3 py-1 rounded-bl-lg z-10">
-                    Best Seller</div>
-
-                <div class="md:w-1/3 h-56 md:h-auto relative overflow-hidden">
-                    <img src="/assets/media/imgs/4.jpeg"
-                        class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
-                </div>
-                <div class="md:w-2/3 p-8 flex flex-col justify-between">
-                    <div>
-                        <div class="flex justify-between items-center mb-2">
-                            <h3 class="text-3xl font-serif text-[#5D4037]">Duo Delight</h3>
-                            <span class="text-2xl font-bold text-[#BC8440]">489 DH</span>
-                        </div>
-                        <p class="text-xs text-gray-500 mb-6 italic">L'harmonie parfaite à partager.</p>
-                        <div class="grid grid-cols-2 gap-3 text-sm text-[#5D4037] font-medium mb-6">
-                            <span>✓ 2x Soupes aux choix</span>
-                            <span>✓ 24pc Royal Assortiment</span>
-                            <span>✓ Yakitori Mix Grillé</span>
-                            <span>✓ Nems Croustillants</span>
-                            <span>✓ Jus & Dattes Premium</span>
-                        </div>
-                    </div>
-                    <button
-                        class="add-to-cart-btn w-full bg-[#BC8440] text-white font-bold py-4 rounded-lg hover:bg-[#5D4037] transition uppercase text-sm tracking-widest shadow-lg">
-                        Commander pour Deux
-                    </button>
-                </div>
-            </div>
-
-            <div class="bg-white rounded-2xl shadow-lg overflow-hidden mb-8 flex flex-col md:flex-row product-card group"
-                data-product-id="family-box" data-product-title="Family Box" data-product-price="899">
-                <div class="md:w-1/3 h-48 md:h-auto relative overflow-hidden">
-                    <img src="/assets/media/imgs/3.jpeg"
-                        class="w-full h-full object-cover transition duration-700 group-hover:scale-110">
-                </div>
-                <div class="md:w-2/3 p-6 flex flex-col justify-between">
-                    <div>
-                        <div class="flex justify-between items-center mb-2">
-                            <h3 class="text-2xl font-serif text-[#5D4037]">Family</h3>
-                            <span class="text-xl font-bold text-[#BC8440]">899 DH</span>
-                        </div>
-                        <p class="text-xs text-gray-500 mb-4 italic">Le festin impérial (4-5 pers).</p>
-                        <ul class="text-sm text-gray-600 space-y-2 mb-6">
-                            <li>• Soupière 2L (Miso ou Piquante)</li>
-                            <li>• Grand Plateau 56 Pièces Variées</li>
-                            <li>• Carafe Jus 1L & Assortiment Entrées Chaudes</li>
-                        </ul>
-                    </div>
-                    <button
-                        class="add-to-cart-btn w-full bg-[#F3DDBB] text-[#5D4037] font-bold py-3 rounded-lg hover:bg-[#BC8440] hover:text-white transition uppercase text-xs tracking-widest">
-                        Commander
-                    </button>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <section class="py-16 bg-white border-y border-[#BC8440]/10">
+    <section id="reviews" class="py-16 bg-white border-y border-[#BC8440]/10">
         <div class="container mx-auto px-6 max-w-5xl">
             <div class="text-center mb-12">
                 <div class="flex justify-center text-[#BC8440] gap-1 mb-2 text-xl">★★★★★</div>
@@ -314,7 +376,7 @@
         </div>
     </section>
 
-    <section class="py-16 bg-white border-t border-[#BC8440]/10">
+    <section id="faq" class="py-16 bg-white border-t border-[#BC8440]/10">
         <div class="container mx-auto px-6 max-w-2xl">
             <h2 class="text-3xl font-serif text-[#5D4037] text-center mb-10">Questions Fréquentes</h2>
 
@@ -384,10 +446,13 @@
     </footer>
 
     <div
-        class="fixed bottom-0 w-full sticky-countdown p-4 z-50 flex justify-between items-center shadow-[0_-5px_20px_rgba(0,0,0,0.2)]">
+        class="countertimer fixed bottom-0 w-full sticky-countdown p-4 z-50 flex justify-between items-center shadow-[0_-5px_20px_rgba(0,0,0,0.2)]">
         <div class="text-white">
             <p class="text-[10px] uppercase tracking-widest opacity-80">Fin des commandes</p>
-            <p class="font-bold font-mono text-xl text-[#BC8440]" id="sticky-timer">00:00:00</p>
+            <div class="font-bold font-mono text-xl text-[#BC8440]" data-landing-id="123">
+                <span id="hours" class="hours">00</span>:<span id="mins" class="mins">00</span>:<span id="secs"
+                    class="secs">00</span>
+            </div>
         </div>
         <a href="#menu"
             class="bg-[#BC8440] text-white px-6 py-3 rounded-full font-bold text-xs uppercase tracking-widest shadow-lg hover:bg-white hover:text-[#BC8440] transition">
